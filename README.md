@@ -1,36 +1,93 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI Agent Chatbot
 
-## Getting Started
+## Proje Hakkında
 
-First, run the development server:
+Bu proje, **Next.js**, **TypeScript**, **LangChain**, **OpenAI GPT** ve **Pinecone** vektör veritabanı kullanarak geliştirilmiş, dokümanlara dayalı akıllı chatbot çözümüdür. Kullanıcıdan gelen soruları anlayıp, önceden indekslenmiş verilerden benzerlik araması yaparak cevap üretir.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Özellikler
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Next.js tabanlı hızlı ve modern frontend & API backend  
+- OpenAI GPT modelleri ile doğal dil işleme  
+- LangChain ile prompt yönetimi ve zincirleme işlemler  
+- Pinecone ile ölçeklenebilir ve hızlı vektör tabanlı arama  
+- TypeScript ile tip güvenliği ve sürdürülebilir kod yapısı
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Kurulum
 
-To learn more about Next.js, take a look at the following resources:
+1. Depoyu klonla:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```bash
+   git clone https://github.com/ceyhunemre0/rag-chatbot.git
+   cd rag-chatbot
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. Bağımlılıkları yükle:
 
-## Deploy on Vercel
+   ```bash
+   npm install
+   # veya
+   yarn install
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. `.env.local` dosyasını oluştur ve aşağıdaki ortam değişkenlerini ekle:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   ```env
+   OPENAI_API_KEY=your_openai_api_key
+   PINECONE_API_KEY=your_pinecone_api_key
+   PINECONE_ENVIRONMENT=your_pinecone_environment
+   PINECONE_INDEX_NAME=your_pinecone_index_name
+   ```
+
+4. Geliştirme sunucusunu başlat:
+
+   ```bash
+   npm run dev
+   # veya
+   yarn dev
+   ```
+
+5. Tarayıcıda aç: `http://localhost:3000`
+
+---
+
+## Proje Yapısı
+
+- `/pages/api` – Next.js API route’ları (backend işlemleri)  
+- `/components` – React bileşenleri  
+- `/lib` – LangChain, OpenAI ve Pinecone entegrasyon kodları  
+- `/utils` – Yardımcı fonksiyonlar  
+- `/public` – Statik dosyalar  
+
+---
+
+## Kullanım
+
+- Uygulama ana sayfasında kullanıcı sorusunu girin.  
+- Sorunuz OpenAI modeli ve Pinecone arama sonucu ile işlenip cevap verilir.  
+- İsterseniz yeni dokümanlar ekleyip indeksleyerek chatbot’u geliştirebilirsiniz.  
+
+---
+
+## Teknolojiler
+
+- [Next.js](https://nextjs.org/)  
+- [TypeScript](https://www.typescriptlang.org/)  
+- [LangChain](https://python.langchain.com/en/latest/)  
+- [OpenAI GPT](https://openai.com/api/)  
+- [Pinecone](https://www.pinecone.io/)  
+
+---
+
+## Katkıda Bulunma
+
+Katkı ve öneriler için PR açabilir veya issue gönderebilirsiniz.
+
+---
+
+## Lisans
+
+MIT License © 2025 Ceyhun Emre
